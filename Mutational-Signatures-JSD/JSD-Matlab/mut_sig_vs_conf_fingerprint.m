@@ -833,7 +833,7 @@ pathname_output  = sprintf('%s/%s',parent_path,path_output); % file name of SBS 
 filename_js_rand = sprintf('%s_js_rand.mat',dataset);
 filename_js_rand = sprintf('%s/%s',pathname_output,filename_js_rand);
 
-save(filename_js_rand);
+save(filename_js_rand,'js_rand');
 
 JS_tbl_CtoA_save = JS_tbl_CtoA_T(:,[1:3,5,9:11]);
 JS_tbl_CtoG_save = JS_tbl_CtoG_T(:,[1:3,5,9:11]);
