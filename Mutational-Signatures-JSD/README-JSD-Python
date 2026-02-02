@@ -19,8 +19,8 @@
 #  No other software installation needed
 #  Expected run-time: ~ 5 minutes
 
-Instructions:
-1. The script is Located at Mutational-Signatures-JSD/JSD-python/mut_sig_vs_conf_fingerprint.py
-2. In the script, under main() choose which dataset to compare to mutational signatures (conf_filename = "GT_Anion.csv" / "AT_HG.csv" / "GC_HG.csv" / "AT_BaseOpening.csv"). See inside for file requirements. The script will read the input file containing the conformational fingerprint (sequence contexts and rare state populations), and compute the Jenssen-Shannon-Divergence (JSD) with the cancer mutational signatures file (.txt file downloaded from the COSMIC database).
-3. Output .csv files contain the full table of JSDs (JSD_summary_unfiltered.csv); as well as the best similarities between the SBS signature and the conformational fingerprint (JSD_summary_filtered.csv).
-4. p-values and FDRs are calculated using against a random distribution.
+# Instructions:
+# 1. The script is Located at Mutational-Signatures-JSD/JSD-python/mut_sig_vs_conf_fingerprint.py
+# 2. In the script, under main() choose which dataset to compare to mutational signatures (conf_filename = "GT_Anion.csv" / "AT_HG.csv" / "GC_HG.csv" / "AT_BaseOpening.csv"). See inside for file requirements. The script will read the input file containing the conformational fingerprint (sequence contexts and rare state populations), and compute the Jenssen-Shannon-Divergence (JSD) with the cancer mutational signatures file (.txt file downloaded from the COSMIC database).
+# 3. Output .csv files contain the full table of JSDs (JSD_summary_unfiltered.csv); as well as the best similarities between the SBS signature and the conformational fingerprint (JSD_summary_filtered.csv).
+# 4. p-values and FDRs are calculated using against a random distribution.
