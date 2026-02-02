@@ -17,6 +17,7 @@
 #   - matplotlib >= 3.3
 # ------------------------------------------------------------
 #  No other software installation needed
+#  Expected run-time: ~ 5 minutes
 
 Instructions:
 1. The script is Located at Mutational-Signatures-JSD/JSD-python/mut_sig_vs_conf_fingerprint.py
