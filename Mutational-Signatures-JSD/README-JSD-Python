@@ -1,0 +1,25 @@
+# ------------------------------------------------------------
+# AUTHORSHIP
+# ------------------------------------------------------------
+# Author: Hashim Al-Hashimi Lab
+# Created: October 2025
+# ------------------------------------------------------------
+#
+# ------------------------------------------------------------
+# REQUIREMENTS NOTICE
+# ------------------------------------------------------------
+# This script requires Python 3.8 or higher and the following
+# package versions (or newer) to ensure full compatibility:
+#
+#   - numpy >= 1.20
+#   - pandas >= 1.1
+#   - scipy >= 1.8        
+#   - matplotlib >= 3.3
+# ------------------------------------------------------------
+#  No other software installation needed
+
+Instructions:
+1. The script is Located at Mutational-Signatures-JSD/JSD-python/mut_sig_vs_conf_fingerprint.py
+2. In the script, under main() choose which dataset to compare to mutational signatures (conf_filename = "GT_Anion.csv" / "AT_HG.csv" / "GC_HG.csv" / "AT_BaseOpening.csv"). See inside for file requirements. The script will read the input file containing the conformational fingerprint (sequence contexts and rare state populations), and compute the Jenssen-Shannon-Divergence (JSD) with the cancer mutational signatures file (.txt file downloaded from the COSMIC database).
+3. Output .csv files contain the full table of JSDs (JSD_summary_unfiltered.csv); as well as the best similarities between the SBS signature and the conformational fingerprint (JSD_summary_filtered.csv).
+4. p-values and FDRs are calculated using against a random distribution.
