@@ -1,0 +1,25 @@
+# ------------------------------------------------------------
+# AUTHORSHIP
+# ------------------------------------------------------------
+# Author: Hashim Al-Hashimi Lab
+# Created: October 2025
+# ------------------------------------------------------------
+#
+# ------------------------------------------------------------
+# REQUIREMENTS NOTICE
+# ------------------------------------------------------------
+# This script was written using Matlab version 2024a
+# and requires Matlab version 2018a or later. Additions needed:
+#
+#   - Mathworks Statistics and Machine Learning Toolbox
+#   - in-house Matlab functions which are provided in 1-Matlab-Functions-add-to-path
+#   - Add this folder to the Matlab path using the command: addpath('pathname')
+# ------------------------------------------------------------
+#  No other software installation needed
+#  Expected run-time: ~ 2 minutes
+
+# Instructions:
+# 1. The script is located at Mutational-Signatures-JSD/JSD-Matlab/mut_sig_vs_conf_fingerprint.m
+# 2. In the script choose which dataset to compare to mutational signatures (GT_Anion / AT_HG / GC_HG / AT_BaseOpening). The script will read the input file containing the conformational fingerprint (sequence contexts and rare state populations), and compute the Jenssen-Shannon-Divergence (JSD) with the cancer mutational signatures file (.txt file downloaded from the COSMIC database).
+# 3. Output .csv files contain the full table of JSDs per substitution (transition mutation C>A, C>G, C>T, T>A, T>C, or T>G); as well as the best similarities between the SBS signature and the conformational fingerprint.
+# 4. Another output file is a JSD table computed against a random distribution, for calculation of p-values and FDRs.
