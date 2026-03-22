@@ -5,7 +5,7 @@
 #  Assessing the contribution of rare DNA states to cancer
 #  mutational signatures using sequence-specific conformational fingerprinting
 #  Or Szekely, 2025-11-02
-#  Updated by Or Szekely, 2026-02-02
+#  Updated by Or Szekely, 2026-03-22
 #########################################################################
 
 This repository contains data folders and scripts for analysis and plotting.
@@ -14,17 +14,17 @@ This repository contains data folders and scripts for analysis and plotting.
 A folder containing Matlab in-house functions necessary for running scripts and analyzing data. Add this folder to the Matlab path using the command: addpath('pathname'); 
 
 2. NMR Spectra
-2.1. Process 1D NMR spectra using NMRPipe (Version 10.6 Revision 2020.007.13.34) and convert spectra to txt format (.txt).
+2.1. Process 1D NMR spectra using NMRPipe (Version 10.6 Revision 2020.007.13.34 / Version 11.5 Revision 2023.105.21.31) and convert spectra to txt format (.txt).
 2.2. Spectra .txt files are saved in NMR-Spectra/1D-1H-imino-spectra and NMR-Spectra/1D-19F-spectra
-2.3. Use figures_all_revised.m to load the .txt files and plot 1D spectra
-2.4. Process 2D NMR spectra (NOESY, HSQC) using NMRPipe (Version 10.6 Revision 2020.007.13.34) and convert spectrum to SPARKY format (.ucsf). 
-2.5. 2D spectra are available upon request. Open ucsf files using SPARKY software. Use SPARKY to create figure of overlayed spectra.
-2.6. Peak the peaks and save the peak lists in the folder CSPs (CSPs/GTA-peak-lists; CSPs/ATT-peak-lists; CSPs/CTG-peak-lists; CSPs/TTG-peak-lists).
-2.7. Use CSPs/csps_GTA_vs_WB; CSPs/csps_ATT_vs_WB; CSPs/csps_CTG_vs_WB; CSPs/csps_TTG_vs_WB to read the peak lists and save .mat files with the chemical shift differences (CSPs).
+2.3. Use figures_all_final.m to load the .txt files and plot 1D spectra
+2.4. Process 2D NMR spectra (NOESY, HSQC) using NMRPipe (Version 10.6 Revision 2020.007.13.34 / Version 11.5 Revision 2023.105.21.31) and convert spectrum to SPARKY format (.ucsf). 
+2.5. 2D spectra are available on Zenodo, DOI: 10.5281/zenodo.17504625. Open ucsf files using SPARKY software. Use SPARKY to create figure of overlayed spectra.
+2.6. Pick the peaks and save the peak lists in the folder CSPs (CSPs/GTA-peak-lists; CSPs/ATT-peak-lists; CSPs/CTG-peak-lists; CSPs/TTG-peak-lists).
+2.7. Use CSPs/csps_GTA_vs_WB.m; CSPs/csps_ATT_vs_WB.m; CSPs/csps_CTG_vs_WB.m; CSPs/csps_TTG_vs_WB.m to read the peak lists and save .mat files with the chemical shift differences (CSPs).
 
 3. Populations-and-Chemical-Shifts
-3.1. Extract chemical shifts from the 1D spectra using NMRPipe (Version 10.6 Revision 2020.007.13.34). Chemical shifts are saved in Populations-and-Chemical-Shifts.19F-and-1H-Chemical-Shifts.xlsx
-3.2. Use figures_all_revised.m to load the 1D 19F spectra .txt files, fit the peak shapes to Lorentzian functions, and extract the GT anion populations. Populations are saved in Populations-and-Chemical-Shifts/Anion_populations_19F_1C_all_pHs.xlsx
+3.1. Extract chemical shifts from the 1D spectra using NMRPipe (Version 10.6 Revision 2020.007.13.34 / Version 11.5 Revision 2023.105.21.31). Chemical shifts are saved in Populations-and-Chemical-Shifts.19F-and-1H-Chemical-Shifts.xlsx
+3.2. Use figures_all_final.m to load the 1D 19F spectra .txt files, fit the peak shapes to Lorentzian functions, and extract the GT anion populations. Populations are saved in Populations-and-Chemical-Shifts/Anion_populations_19F_1C_all_pHs_revised.xlsx
 3.3. Also included is a list of unique permutations of parent and destination sequences for additivity calculations taken from Manghrani et al (DOI: 10.1021/acs.biochem.4c00820)
 3.4. Chemical shift additivity (as well as pKa additivity) can be calculated using figures_all_revised.m.
 
@@ -33,7 +33,7 @@ A folder containing Matlab in-house functions necessary for running scripts and 
 4.2. Use Previous-R1rho-Params/save_R1rho_params.m to read the RD parameters and save both anion and tautomer data, including delta G, and save in: Previous-R1rho-Params/Prev-Anion-Populations; Previous-R1rho-Params/Prev-Tautomer-Populations; Previous-R1rho-Params/Prev-dG-Anion-and-Tautomer.
 4.3. Melting energies are saved in dG-delta-melt/ddGmelt-GC-vs-GT.xlsx
 4.4. Use dG-delta-melt/ddG_delta_melt.m to read the melting deltaG values and save them as a Matlab .mat file.
-4.5. Use figures_all_revised.m to load the dG values from above, compute the difference in free energy with sequence (ddG), and plot against ddG(anion).
+4.5. Use figures_all_final.m to load the dG values from above, compute the difference in free energy with sequence (ddG), and plot against ddG(anion).
 
 5. NMR R1rho data
 5.1. Raw R1rho data was processed using Disprun (https://github.com/alhashimilab/Disprun.git) based on NMRPipe (Version 10.6 Revision 2020.007.13.34) to extract peak intensities and fit the relaxation curves using mono-exponential decays.
